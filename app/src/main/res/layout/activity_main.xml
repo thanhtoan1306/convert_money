@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingHorizontal="20dp"
+    android:clickable="true"
+    android:background="@color/white"
+    android:focusableInTouchMode="true"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/CurrencySource"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="89dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="monospace"
+        android:text="Currency Converter"
+        android:textColor="#334EDF"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.001" />
+
+    <LinearLayout
+
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <Spinner
+                android:id="@+id/spinnerFrom"
+                android:layout_weight="3"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+
+                android:background= "@color/black" />
+
+            <EditText
+                android:id="@+id/value"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_height="40dp"
+                android:imeOptions="actionDone"
+                android:textAlignment="center"
+                android:inputType="numberDecimal"
+                android:textColor="@color/grey"
+                android:text="1"
+                android:gravity="center_horizontal" />
+        </LinearLayout>
+
+        <Button
+
+            android:id="@+id/button"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="10dp"
+            android:backgroundTint="@color/green"
+            android:fontFamily="monospace"
+            android:text="Convert"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            />
+
+        <LinearLayout
+            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/spinnerTo"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="3"
+                android:background= "@color/black" />
+
+            <TextView
+                android:id="@+id/valueResult"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:layout_height="40dp"
+                android:textColor="@color/grey"
+                android:gravity="center"
+                android:text="Result" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+    <Button
+        android:id="@+id/clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:backgroundTint="@color/red"
+        android:fontFamily="monospace"
+        android:paddingTop="2sp"
+        android:text="clear"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/green"
+        android:textSize="20dp"
+        android:gravity="start"
+        android:text="History: " />
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView"-->
+<!--        android:layout_width="78dp"-->
+<!--        android:layout_height="29dp"-->
+<!--        android:layout_marginStart="66dp"-->
+<!--        android:layout_marginTop="120dp"-->
+<!--        android:layout_marginEnd="267dp"-->
+<!--        android:fontFamily="monospace"-->
+<!--        android:text="From"-->
+<!--        android:textColor="@color/blackrgb"-->
+<!--        android:textSize="18sp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/result"
+        android:layout_width="360dp"
+        android:layout_height="182dp"
+        android:background="@color/whiteresult"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.656" />
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/result"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:background="@color/white"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.656" />-->
+
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView2"-->
+<!--        android:layout_width="78dp"-->
+<!--        android:layout_height="29dp"-->
+<!--        android:layout_marginStart="66dp"-->
+<!--        android:layout_marginTop="220dp"-->
+<!--        android:layout_marginEnd="267dp"-->
+<!--        android:fontFamily="monospace"-->
+<!--        android:text="To"-->
+<!--        android:textColor="@color/blackrgb"-->
+<!--        android:textSize="18sp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView3"-->
+<!--        android:layout_width="78dp"-->
+<!--        android:layout_height="29dp"-->
+<!--        android:layout_marginStart="66dp"-->
+<!--        android:layout_marginTop="316dp"-->
+<!--        android:layout_marginEnd="267dp"-->
+<!--        android:fontFamily="monospace"-->
+<!--        android:text="Amount"-->
+<!--        android:textColor="@color/blackrgb"-->
+<!--        android:textSize="18sp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView4"-->
+<!--        android:layout_width="81dp"-->
+<!--        android:layout_height="27dp"-->
+<!--        android:layout_marginTop="455dp"-->
+<!--        android:fontFamily="monospace"-->
+<!--        android:text="Result"-->
+<!--        android:textColor="@color/blackrgb"-->
+<!--        android:textSize="18sp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.078"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+
+</LinearLayout>
